@@ -2,7 +2,8 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
 var BasePage = require('../pageobjects/basepage');
 var webdriver = require('selenium-webdriver');
 //const assert = require("assert")
-
+const fs = require('fs');
+const { allure } = require("allure-mocha/runtime");
 
 //const chai = require('chai');
 //const chaiAsPromised = require('chai-as-promised');
@@ -17,7 +18,6 @@ const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 
 const { assert, expect } = chai;
-const allure = require('@wdio/allure-reporter');
 
 
 
