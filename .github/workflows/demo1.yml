@@ -35,18 +35,10 @@ jobs:
 
     - name: Generate and Serve Allure Reports
       run: |
-        allure generate --clean ./allure-results
-        python3 -m http.server 8080 --directory ./allure-report &
-
+        allure generate --clean ./allure-results && allure open
+        
     - name: Update /etc/hosts
       run: |
         echo "3.230.10.186 ttl.lemnisk.co" | sudo tee -a /etc/hosts
         echo "3.230.10.186 lemniskapi2.lemnisk.co" | sudo tee -a /etc/hosts
         echo "3.230.10.186 appbackend.lemnisk.co" | sudo tee -a /etc/hosts
-
-    - name: Open Allure Reports with Custom Hostname
-      run: |
-        # Wait for the HTTP server to start
-        sleep 5
-        # Open the Allure report using one of the custom hostnames
-        xdg-open http://ttl.lemnisk.co:8080
