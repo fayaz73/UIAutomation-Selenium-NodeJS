@@ -24,6 +24,12 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+        
+    - name: Update /etc/hosts
+      run: |
+        echo "3.230.10.186 ttl.lemnisk.co" | sudo tee -a /etc/hosts
+        echo "3.230.10.186 lemniskapi2.lemnisk.co" | sudo tee -a /etc/hosts
+        echo "3.230.10.186 appbackend.lemnisk.co" | sudo tee -a /etc/hosts
 
     - name: Install dependencies
       run: |
@@ -36,9 +42,3 @@ jobs:
     - name: Generate and Serve Allure Reports
       run: |
         allure generate --clean ./allure-results && allure open
-        
-    - name: Update /etc/hosts
-      run: |
-        echo "3.230.10.186 ttl.lemnisk.co" | sudo tee -a /etc/hosts
-        echo "3.230.10.186 lemniskapi2.lemnisk.co" | sudo tee -a /etc/hosts
-        echo "3.230.10.186 appbackend.lemnisk.co" | sudo tee -a /etc/hosts
