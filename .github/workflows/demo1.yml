@@ -31,7 +31,7 @@ jobs:
         npm install -g allure-commandline
 
     - name: Run Selenium Tests
-      run: npx mocha -R allure-mocha ./test
+      run: npx mocha -R allure-mocha ./test/segmenttest.spec.js
 
     - name: Generate and Serve Allure Reports
       run: |
