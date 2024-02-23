@@ -8,12 +8,11 @@
     "execute-testCases": "browserstack-node-sdk mocha test/excuteTC.js --timeout=600000",
     "testCase": "browserstack-node-sdk mocha test/logintest.spec.js --timeout=600000",
     "testCase1": "browserstack-node-sdk mocha test/logintest.spec.js --timeout=600000",
-    "postinstall": "npm update browserstack-node-sdk",
-    "wdio": "wdio run ./wdio.conf.js"
+    "postinstall": "npm update browserstack-node-sdk"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/browserstack/mocha-browserstack.git"
+    "url": "git+https://github.com/fayaz73/UIAutomation-Selenium-NodeJS.git"
   },
   "keywords": [
     "mocha",
@@ -22,10 +21,6 @@
     "examples"
   ],
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/browserstack/mocha-browserstack/issues"
-  },
-  "homepage": "https://github.com/browserstack/mocha-browserstack#readme",
   "dependencies": {
     "chai": "^4.4.1",
     "chai-as-promised": "^7.1.1",
