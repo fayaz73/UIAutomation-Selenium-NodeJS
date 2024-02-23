@@ -48,7 +48,7 @@
     "browserstack-node-sdk": "latest"
   },
   "mocha": {
-    "parallel": true,
+    "parallel": false,
     "reporter": "allure-mocha",
     "reporterOptions": {
       "resultsDir": "allure-results"
