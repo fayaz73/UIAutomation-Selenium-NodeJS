@@ -41,9 +41,6 @@ jobs:
           echo "3.230.10.186 ttl.lemnisk.co" | sudo tee -a /etc/hosts
           echo "3.230.10.186 lemniskapi2.lemnisk.co" | sudo tee -a /etc/hosts
           echo "3.230.10.186 appbackend.lemnisk.co" | sudo tee -a /etc/hosts
-          
-      - name: Start selenoid
-        uses: Xotabu4/selenoid-github-action@v2
         
       - uses: actions/checkout@v1
       - run: npm ci
