@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "node test/segmenttest.spec.js"
+    "test": "npx mocha test/segmenttest.spec.js"
   },
   "repository": {
     "type": "git",
