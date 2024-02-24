@@ -29,6 +29,7 @@ jobs:
       run: |
         npm ci
         npm install
+        npm install mocha@latest mocha-allure-reporter@latest --save-dev
         npm install -g allure-commandline
         npm install mocha-allure-reporter
         
