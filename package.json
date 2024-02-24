@@ -3,7 +3,12 @@
   "version": "0.0.1",
   "description": " Selenium examples for Mocha and BrowserStack Automate",
   "scripts": {
-    "test": "mocha ./test/segmenttest.spec.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "node test/segmenttest.spec.js",
+    "e2e-test": "start-server-and-test dev <http://localhost:3000> test"
   },
   "repository": {
     "type": "git",
@@ -27,8 +32,6 @@
   "devDependencies": {
     "allure-commandline": "^2.26.0",
     "allure-mocha": "^2.11.1",
-    "browsermob-proxy-client": "^0.1.2",
-    "browserstack-node-sdk": "latest"
   },
   "mocha": {
     "parallel": false,
