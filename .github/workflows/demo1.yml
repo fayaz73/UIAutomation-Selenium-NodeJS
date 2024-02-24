@@ -4,15 +4,7 @@ on:
   push:
     branches:
       - master
-  workflow_dispatch:
-    inputs:
-      browser:
-        type: choice
-        description: Which browser to test
-        required: true
-        options:
-          - chrome
-          
+      
 jobs:
   test:
     runs-on: ubuntu-latest
