@@ -40,7 +40,8 @@ jobs:
           echo "3.230.10.186 appbackend.lemnisk.co" | sudo tee -a /etc/hosts
 
       - name: Run Selenium Tests
-        run: npx mocha --verbose ./test/segmenttest.spec.js || exit 0
+        #run: npx mocha --verbose ./test/segmenttest.spec.js || exit 0
+        run: npm run test
         continue-on-error: true
         working-directory: ${{ github.workspace }}
 
