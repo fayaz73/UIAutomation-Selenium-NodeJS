@@ -42,15 +42,12 @@ jobs:
     - name: Run Selenium Tests
       run: npx mocha test/segmenttest.spec.js || exit 0
       continue-on-error: true
-    
+
+    - name: Debugging Information
+      run: |
+       # Print the contents of the test directory for inspection
+       ls -R ./test
+       
     - name: Generate and Serve Allure Reports
       run: |
         allure generate --clean ./allure-results && allure open
-        
-    - name: Debugging Information
-      run: |
-        # Print the contents of the test directory for inspection
-        ls -R ./test
-
-        # Print the contents of the Allure results directory for inspection
-        ls -R ./allure-results
