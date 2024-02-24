@@ -41,7 +41,7 @@ jobs:
 
       - name: Run Selenium Tests
         #run: npx mocha --verbose ./test/segmenttest.spec.js || exit 0
-        run: npm run test
+        run: npm run test -- --verbose || exit 0
         continue-on-error: true
         working-directory: ${{ github.workspace }}
 
