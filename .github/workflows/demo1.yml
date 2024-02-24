@@ -20,6 +20,11 @@ jobs:
     strategy:
       matrix:
         node-version: [18, 19, 20, 21]
+        
+    services:
+      selenium:
+        image: selenium/standalone-${{ github.event.inputs.browser }}
+        options: --shm-size=2gb
 
     steps:
       - name: Checkout repository
@@ -36,10 +41,11 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          npm install mocha@latest
+          npm install --global mocha@latest
           #npm install mocha-selenium
           npm install chai
           #npm install mocha@latest mocha-allure-reporter@latest --save-dev
+          npm install --save-dev mochawesome
           npm install -g allure-commandline
           npm install mocha-allure-reporter
 
