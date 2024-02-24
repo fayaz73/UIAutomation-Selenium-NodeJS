@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "npm ./test/logintest.spec.js"
+    "test": "node ./test/logintest.spec.js"
   },
   "repository": {
     "type": "git",
