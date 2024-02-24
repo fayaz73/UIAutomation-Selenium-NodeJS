@@ -41,7 +41,7 @@ jobs:
 
     - name: Run Selenium Tests
       run: npx mocha test/segmenttest.spec.js || exit 0
-        continue-on-error:true
+      continue-on-error: true
     
     - name: Generate and Serve Allure Reports
       run: |
