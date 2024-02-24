@@ -6,7 +6,6 @@ const loginpage = require('../pageobjects/loginpage');
 const segmentlistpage = require('../pageobjects/segmentlistpage')
 const segmentCreationPage = require('../pageobjects/segmentCreationPage')
 const smsEngageCreate = require ('../pageobjects/smsEngagementCreationPage')
-const { drive } = require("googleapis/build/src/apis/drive");
 const objt = require('../operations/ReadObjects');
 const opertn = require('../operations/UIOperations');
 
