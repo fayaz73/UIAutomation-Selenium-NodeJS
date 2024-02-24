@@ -39,7 +39,7 @@ jobs:
         echo "3.230.10.186 appbackend.lemnisk.co" | sudo tee -a /etc/hosts
 
     - name: Run Selenium Tests
-      run: npx mocha test/logintest.spec.js
+      run: npx mocha test
 
     - name: Generate and Serve Allure Reports
       run: |
