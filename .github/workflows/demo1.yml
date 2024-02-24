@@ -40,10 +40,15 @@ jobs:
           echo "3.230.10.186 appbackend.lemnisk.co" | sudo tee -a /etc/hosts
 
       - name: Run Selenium Tests
-        run: npx mocha ./test/segmenttest.spec.js || exit 0
+        run: npx mocha --verbose ./test/segmenttest.spec.js || exit 0
         continue-on-error: true
+        working-directory: ${{ github.workspace }}
 
       - name: Debugging Information
         run: |
-          # Print the contents of the test directory for inspection
+          echo "Current Working Directory: $(pwd)"
+          echo "Contents of the ./test directory:"
           ls -R ./test
+          echo "Environment Variables: ${{ toJson(env) }}"
+        continue-on-error: true
+
