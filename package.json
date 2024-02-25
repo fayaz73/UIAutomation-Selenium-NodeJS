@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": " Selenium examples for Mocha and BrowserStack Automate",
   "scripts": {
-    "test":"node test/loginttest.js"
-    "report": "allure generate allure-results --clean && allure open"
+    "test": "npx mocha test/loginttest.js"
   },
   "repository": {
     "type": "git",
