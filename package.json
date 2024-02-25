@@ -3,12 +3,7 @@
   "version": "0.0.1",
   "description": " Selenium examples for Mocha and BrowserStack Automate",
   "scripts": {
-    "sample-test": "browserstack-node-sdk mocha test/sample_test.js --timeout=600000",
-    "sample-local-test": "browserstack-node-sdk mocha test/sample_local_test.js --timeout=600000",
-    "execute-testCases": "browserstack-node-sdk mocha test/excuteTC.js --timeout=600000",
-    "testCase": "browserstack-node-sdk mocha test/logintest.spec.js --timeout=600000",
-    "testCase1": "browserstack-node-sdk mocha test/logintest.spec.js --timeout=600000",
-    "report": "allure generate allure-results --clean && allure open"
+    "test": "npx mocha test/logintest.spec.js"
   },
   "repository": {
     "type": "git",
