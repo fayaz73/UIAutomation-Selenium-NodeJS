@@ -26,22 +26,19 @@ jobs:
           node-version: ${{ matrix.node-version }}
           
       - name: Install dependencies
-        run: |
-          npm install
+        run: npm ci
 
+      - name: Setup Chrome
+        uses: actions/setup-chrome@v2
+      
       - name: Update /etc/hosts
         run: |
           echo "3.230.10.186 ttl.lemnisk.co" | sudo tee -a /etc/hosts
           echo "3.230.10.186 lemniskapi2.lemnisk.co" | sudo tee -a /etc/hosts
           echo "3.230.10.186 appbackend.lemnisk.co" | sudo tee -a /etc/hosts
         
-      - uses: actions/checkout@v1
-      - run: npm ci
-      
       - name: Run Selenium Tests
-        #run: npx mocha --verbose ./test/segmenttest.spec.js || exit 0
         run: npm run test
-        #continue-on-error: true
         working-directory: ${{ github.workspace }}
 
       - name: Debugging Information
@@ -51,4 +48,3 @@ jobs:
           ls -R ./test
           echo "Environment Variables: ${{ toJson(env) }}"
         continue-on-error: true
-
