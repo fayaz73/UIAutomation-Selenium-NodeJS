@@ -23,7 +23,7 @@
   "dependencies": {
     "chai": "^4.4.1",
     "chai-as-promised": "^7.1.1",
-    "mocha": "^9.2.2",
+    "mocha-selenium": "^0.1.1",
     "mocha-allure-reporter": "^1.4.0",
     "properties-reader": "^2.3.0",
     "selenium-webdriver": "^4.16.0"
