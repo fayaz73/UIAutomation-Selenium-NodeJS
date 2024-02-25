@@ -8,7 +8,9 @@ const opertn = require('../operations/UIOperations');
 
 
 function login() {
-
+    let driver = await loginpage.driver;
     await driver.get("https://www.google.com")
 
 }
+
+login();
