@@ -1,4 +1,5 @@
 var webdriver = require('selenium-webdriver');
+const { Builder, By, WebElementCondition,Capabilities, until, Actions } = require("selenium-webdriver")
 var  driver =  new webdriver.Builder().forBrowser('chrome').build();
 
 
