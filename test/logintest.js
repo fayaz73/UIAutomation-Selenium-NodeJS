@@ -7,7 +7,7 @@ const objt = require('../operations/ReadObjects');
 const opertn = require('../operations/UIOperations');
 
 
-function login() {
+function async login() {
     let driver = await loginpage.driver;
     await driver.get("https://www.google.com")
 
