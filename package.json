@@ -3,7 +3,12 @@
   "version": "0.0.1",
   "description": " Selenium examples for Mocha and BrowserStack Automate",
   "scripts": {
-    "test": "npx mocha test/logintest.spec.js"
+    "sample-test": "browserstack-node-sdk mocha test/sample_test.js --timeout=600000",
+    "sample-local-test": "browserstack-node-sdk mocha test/sample_local_test.js --timeout=600000",
+    "execute-testCases": "browserstack-node-sdk mocha test/excuteTC.js --timeout=600000",
+    "testCase": "browserstack-node-sdk mocha test/logintest.spec.js --timeout=600000",
+    "testCase1": "browserstack-node-sdk mocha test/logintest.spec.js --timeout=600000",
+    "report": "allure generate allure-results --clean && allure open"
   },
   "repository": {
     "type": "git",
@@ -18,15 +23,21 @@
   ],
   "license": "ISC",
   "dependencies": {
+    "browsermob-proxy": "^1.0.13",
+    "browserstack-local": "^1.4.8",
+    "browserstack-webdriver": "^2.41.1",
     "chai": "^4.4.1",
     "chai-as-promised": "^7.1.1",
-    "mocha-selenium": "^0.1.1",
+    "google-spreadsheet": "^4.1.1",
+    "googleapis": "^129.0.0",
     "properties-reader": "^2.3.0",
     "selenium-webdriver": "^4.16.0"
   },
   "devDependencies": {
     "allure-commandline": "^2.26.0",
     "allure-mocha": "^2.12.2",
+    "browsermob-proxy-client": "^0.1.2",
+    "browserstack-node-sdk": "latest",
     "mocha": "^10.3.0",
     "mocha-allure-reporter": "^1.4.0",
     "mochawesome": "^7.1.3",
