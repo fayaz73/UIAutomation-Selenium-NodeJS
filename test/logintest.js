@@ -8,8 +8,8 @@ const opertn = require('../operations/UIOperations');
 
 
 function async login() {
-    let driver = await loginpage.driver;
     await driver.get("https://www.google.com")
+    await driver.manage().window().setRect({ width: 1848, height: 1053 })
 
 }
 
