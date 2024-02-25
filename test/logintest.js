@@ -17,5 +17,5 @@ describe('Testing login functionality', function() {
     console.log("executed fourth step")
     await driver.findElement(By.xpath("//button")).click();
     console.log("executed fifth step")
-  }
-     }
+  });
+     });
