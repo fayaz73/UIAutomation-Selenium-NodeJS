@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": " Selenium examples for Mocha and BrowserStack Automate",
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha.js './test/segmenttest.spec.js'"
+    "test": "node ./node_modules/mocha/bin/mocha.js './test/logintest.js'"
   },
   "repository": {
     "type": "git",
