@@ -28,13 +28,6 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          npm install mocha --save-dev
-          #npm install mocha-selenium
-          npm install chai
-          #npm install mocha@latest mocha-allure-reporter@latest --save-dev
-          npm install --save-dev mochawesome
-          npm install -g allure-commandline
-          npm install mocha-allure-reporter
 
       - name: Update /etc/hosts
         run: |
