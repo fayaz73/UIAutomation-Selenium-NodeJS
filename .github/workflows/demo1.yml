@@ -4,39 +4,34 @@ on:
   push:
     branches:
       - master
-      
+
 jobs:
   test:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18, 19, 20, 21]
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          token: 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
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-          
+          node-version: 14
+
       - name: Install dependencies
         run: npm ci
 
       - name: Setup Chrome
-        uses: actions/setup-chrome@v2
-      
+        run: |
+          docker pull selenium/standalone-chrome:latest
+          docker run -d -p 4444:4444 selenium/standalone-chrome:latest
+
       - name: Update /etc/hosts
         run: |
           echo "3.230.10.186 ttl.lemnisk.co" | sudo tee -a /etc/hosts
           echo "3.230.10.186 lemniskapi2.lemnisk.co" | sudo tee -a /etc/hosts
           echo "3.230.10.186 appbackend.lemnisk.co" | sudo tee -a /etc/hosts
-        
+
       - name: Run Selenium Tests
         run: npm run test
         working-directory: ${{ github.workspace }}
