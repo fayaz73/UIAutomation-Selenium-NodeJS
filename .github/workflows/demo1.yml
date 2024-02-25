@@ -27,7 +27,7 @@ jobs:
           
       - name: Install dependencies
         run: |
-          npm install -g mocha@latest
+          npm install
 
       - name: Update /etc/hosts
         run: |
