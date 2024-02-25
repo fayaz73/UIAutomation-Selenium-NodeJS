@@ -8,7 +8,7 @@ function  login() {
     console.log("executed first step")
     driver.manage().window().setRect({ width: 1848, height: 1053 })
     console.log("executed second step")
-    driver.findElement(By.name("username")).sendkeys("ahamed6035");
+    driver.findElement(By.name("username")).sendKeys("ahamed6035");
     console.log("executed third step")
     driver.findElement(By.name("password")).sendKeys("123$Urbanladder");
     console.log("executed fourth step")
