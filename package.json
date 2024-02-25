@@ -3,18 +3,20 @@
   "version": "0.0.1",
   "description": " Selenium examples for Mocha and BrowserStack Automate",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "test": "node ./test/logintest.spec.js"
+    "sample-test": "browserstack-node-sdk mocha test/sample_test.js --timeout=600000",
+    "sample-local-test": "browserstack-node-sdk mocha test/sample_local_test.js --timeout=600000",
+    "execute-testCases": "browserstack-node-sdk mocha test/excuteTC.js --timeout=600000",
+    "testCase": "browserstack-node-sdk mocha test/logintest.spec.js --timeout=600000",
+    "testCase1": "browserstack-node-sdk mocha test/logintest.spec.js --timeout=600000",
+    "report": "allure generate allure-results --clean && allure open"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fayaz73/UIAutomation-Selenium-NodeJS.git"
+    "url": "git+https://github.com/Immensitas/ui-test-automation.git"
   },
   "keywords": [
     "mocha",
+    "browserstack",
     "selenium",
     "automate",
     "examples"
