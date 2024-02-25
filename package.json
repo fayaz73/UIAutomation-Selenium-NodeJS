@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": " Selenium examples for Mocha and BrowserStack Automate",
   "scripts": {
-    "test": "npx mocha test/loginttest.js"
+    "test": "node test/loginttest.js"
   },
   "repository": {
     "type": "git",
