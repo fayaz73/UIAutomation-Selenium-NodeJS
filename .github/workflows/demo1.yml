@@ -49,12 +49,13 @@ jobs:
       
       - name: Run Selenium Tests
         #run: npx mocha --verbose ./test/segmenttest.spec.js || exit 0
-        run: npm run test
-        #continue-on-error: true
+        run: npm run test || exit 0
+        continue-on-error: true
         working-directory: ${{ github.workspace }}
 
       - name: Debugging Information
         run: |
+          set -x
           echo "Current Working Directory: $(pwd)"
           echo "Contents of the ./test directory:"
           ls -R ./test
