@@ -27,6 +27,9 @@ jobs:
           
       - name: Install mocha
         run: npm install -g mocha
+
+      - name: Check Mocha version
+        run: npx mocha --version
         
       - uses: browser-actions/setup-chrome@v1
       - run: chrome --version
