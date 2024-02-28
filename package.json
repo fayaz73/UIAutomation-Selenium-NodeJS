@@ -1,5 +1,5 @@
 {
-  "name": "mocha-browserstack",
+  "name": "mocha-browser",
   "version": "0.0.1",
   "description": " Selenium examples for Mocha and BrowserStack Automate",
   "scripts": {
@@ -11,7 +11,6 @@
   },
   "keywords": [
     "mocha",
-    "browserstack",
     "selenium",
     "automate",
     "examples"
