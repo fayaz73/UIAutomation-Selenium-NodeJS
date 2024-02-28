@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Immensitas/ui-test-automation.git"
+    "url": "git+https://github.com/fayaz73/UIAutomation-Selenium-NodeJS.git"
   },
   "keywords": [
     "mocha",
