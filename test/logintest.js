@@ -2,9 +2,9 @@ var webdriver = require('selenium-webdriver');
 const { Builder, By, WebElementCondition,Capabilities, until, Actions } = require("selenium-webdriver")
 var  driver =  new webdriver.Builder().forBrowser('chrome').build();
 
-/*
+
 describe('Testing login functionality', function() {
- // this.timeout(100000)
+    this.timeout(100000)
     it('login_test', async function() {
       
     await driver.get("https://ttl.lemnisk.co/app")
@@ -19,8 +19,9 @@ describe('Testing login functionality', function() {
     console.log("executed fifth step")
   })
      })
-     */
+     
 
+/*
 function login() {
     driver.get("https://cdp.lemnisk.co/app/")
     console.log("executed first step")
@@ -29,4 +30,5 @@ function login() {
 }
 
 login();
+*/
 
