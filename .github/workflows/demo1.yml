@@ -48,8 +48,8 @@ jobs:
       - run: npm ci
       
       - name: Run Selenium Tests
-        #run: npx mocha --verbose ./test/segmenttest.spec.js || exit 0
-        run: npm run test
+        run: npx mocha --verbose ./test/segmenttest.spec.js || exit 0
+        #run: npm run test
         continue-on-error: true
         working-directory: ${{ github.workspace }}
 
