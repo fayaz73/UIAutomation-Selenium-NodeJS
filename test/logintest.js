@@ -3,8 +3,8 @@ const { Builder, By, WebElementCondition,Capabilities, until, Actions } = requir
 var  driver =  new webdriver.Builder().forBrowser('chrome').build();
 
 
-describe('Testing login functionality', async function() {
-  this.timeout(100000)
+describe('Testing login functionality', function() {
+ // this.timeout(100000)
     it('login_test', async function() {
       
     await driver.get("https://ttl.lemnisk.co/app")
