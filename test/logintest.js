@@ -1,6 +1,10 @@
 var webdriver = require('selenium-webdriver');
 const { Builder, By, WebElementCondition,Capabilities, until, Actions } = require("selenium-webdriver")
-var  driver =  new webdriver.Builder().forBrowser('chrome').build();
+const chrome = require('selenium-webdriver/chrome');
+const chromeOptions = new chrome.Options();
+chromeOptions.setChromeBinaryPath('./drivers/chromedriver');
+
+var  driver =  new webdriver.Builder().forBrowser('chrome').setChromeOptions(chromeOptions).build();
 
 
 describe('Testing login functionality', function() {
