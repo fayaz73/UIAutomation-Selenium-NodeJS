@@ -37,7 +37,7 @@ class LoginPage extends BasePage{
         //console.log(password);
        //await driver.findElement(By.id("mui-1")).clear();
        //await driver.findElement(By.id("mui-2")).cleconst assert = require("assert")ar();
-       await driver.manage().setTimeouts({ implicit: 100000 });
+       //await driver.manage().setTimeouts({ implicit: 100000 });
        await driver.findElement(By.name("username")).sendKeys(username);
        await driver.findElement(By.name("password")).sendKeys(password);
        await driver.findElement(By.css(".MuiButton-root")).click()
