@@ -2,6 +2,7 @@ var webdriver = require('selenium-webdriver');
 const { Builder, By, WebElementCondition,Capabilities, until, Actions } = require("selenium-webdriver")
 const chrome = require('selenium-webdriver/chrome');
 const chromeOptions = new chrome.Options();
+chromeOptions.addArguments('--no-sandbox');
 chromeOptions.setChromeBinaryPath('./drivers/chromedriver');
 
 var  driver =  new webdriver.Builder().forBrowser('chrome').setChromeOptions(chromeOptions).build();
