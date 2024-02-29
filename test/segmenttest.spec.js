@@ -123,7 +123,7 @@ describe('Testing Creation of Segment', function() {
     await segmentCreationPage.testSegCreationWithOutRule(testdata.username.input.validusername, testdata.password.input.validpassword,await this.driver);
     await segmentCreationPage.clickSegBreadCrum(testdata.username.input.validusername, testdata.password.input.validpassword,await this.driver); */
 
-    await loginpage.log_in(testdata.username.input.validusername, testdata.password.input.validpassword,await driver);
+    //await loginpage.log_in(testdata.username.input.validusername, testdata.password.input.validpassword,await driver);
     await segmentlistpage.clickONAddSementBtn(await driver);
     await segmentCreationPage.testSegCreationWithOutRule(await driver);
     await segmentCreationPage.clickSegBreadCrum(await driver);
