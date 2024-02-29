@@ -8,7 +8,7 @@ const ExpectedSegmentCreated = {
     errMsg: {
       sameNameErrMsg: 'Segment with the same name already exi.',
       atleastOneRuleError: 'There must be at least 1 r',
-      addAtleastOneRule: 'Please add at least one ru'
+      addAtleastOneRule: 'Please add at least one rule'
     }
   }
 };
