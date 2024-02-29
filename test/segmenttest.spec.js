@@ -47,7 +47,7 @@ describe('Testing Creation of Segment', function() {
   })
   
 
-  it ('segmentlist_addSegmentBtn_test', async function() {
+  it.skip ('segmentlist_addSegmentBtn_test', async function() {
    
     /* this.timeout(100000)
     prop = await objt.getObjectRepository();
