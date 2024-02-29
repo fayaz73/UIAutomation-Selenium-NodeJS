@@ -50,8 +50,8 @@ jobs:
         #run: npx mocha --verbose ./test/segmenttest.spec.js || exit 0
         run: |
          npx mocha --version
-         #npm run test
-         npx mocha test/segmenttest.spec.js
+         npm run test
+         #npx mocha test/segmenttest.spec.js
         env:
          NODE_ENV: test
         continue-on-error: true
