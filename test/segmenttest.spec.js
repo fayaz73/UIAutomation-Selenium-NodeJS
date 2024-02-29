@@ -96,7 +96,7 @@ describe('Testing Creation of Segment', function() {
   
   it ('segmentlist_testDeletingAllSegmentRules', async function() {
    
-    this.timeout(100000)
+    //this.timeout(100000)
     /* //prop = await objt.getObjectRepository();
     //await this.driver.manage().setTimeouts({ implicit: 1000000 });
     //await loginpage.log_in(testdata.username.input.validusername, testdata.password.input.validpassword,await this.driver);
@@ -115,7 +115,7 @@ describe('Testing Creation of Segment', function() {
 
   it ('segmentlist_testSegCreationWithOutRules', async function() {
    
-    this.timeout(100000)
+    //this.timeout(100000)
    /* // prop = await objt.getObjectRepository();
     //await this.driver.manage().setTimeouts({ implicit: 1000000 });
    // await loginpage.log_in(testdata.username.input.validusername, testdata.password.input.validpassword,await this.driver);
