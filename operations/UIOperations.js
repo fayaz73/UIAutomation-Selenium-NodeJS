@@ -67,7 +67,7 @@ class Operations extends BasePage  {
               break;
             case "SETTEXT":
               //Set text on control
-              console.log("Inside switch case SETTEXT:"+ await this.getObject(prop,object,objecttype));
+              //console.log("Inside switch case SETTEXT:"+ await this.getObject(prop,object,objecttype));
               await (await driver.findElement(await this.getObject(prop,object,objecttype))).sendKeys(value);
               break;
             case "GOTOURL":
@@ -95,7 +95,7 @@ class Operations extends BasePage  {
                 */
                for (const element of items){
                     const item = await element.getText();
-                    console.log(item);
+                    //console.log(item);
                     if (item === value){
                         await element.click();
                         break;
