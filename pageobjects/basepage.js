@@ -1,4 +1,12 @@
 var webdriver = require('selenium-webdriver');
+
+const chrome = require('selenium-webdriver/chrome');
+const chromeOptions = new chrome.Options();
+chromeOptions.addArguments('--no-sandbox');
+chromeOptions.addArguments('--disable-dev-shm-usage');
+chromeOptions.addArguments('--headless');
+chromeOptions.setChromeBinaryPath('./drivers/chromedriver');
+
 var  driver =  new webdriver.Builder().forBrowser('chrome').build();
 driver.manage().setTimeouts({implicit:(100000)});
 
