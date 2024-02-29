@@ -56,6 +56,12 @@ jobs:
          NODE_ENV: test
         continue-on-error: true
         working-directory: ${{ github.workspace }}
+
+      - name: Upload Mochawesome Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: mochawesome-report
+          path: /home/runner/work/UIAutomation-Selenium-NodeJS/UIAutomation-Selenium-NodeJS/mochawesome-report
         
       - name: Debugging Information
         run: |
