@@ -7,7 +7,7 @@ chromeOptions.addArguments('--disable-dev-shm-usage');
 chromeOptions.addArguments('--headless');
 chromeOptions.setChromeBinaryPath('./drivers/chromedriver');
 
-var  driver =  new webdriver.Builder().forBrowser('chrome').build();
+var  driver =  new webdriver.Builder().forBrowser('chrome').setChromeOptions(chromeOptions).build();
 driver.manage().setTimeouts({implicit:(100000)});
 
 
