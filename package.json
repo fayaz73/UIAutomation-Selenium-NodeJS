@@ -4,7 +4,7 @@
   "description": " Selenium examples for Mocha and BrowserStack Automate",
   "scripts": {
     "report": "allure generate allure-results --clean && allure open",
-    "test": "npx mocha ./test/logintest.js"
+    "test": "mocha --reporter spec ./test/logintest.js --exit"
   },
   "repository": {
     "type": "git",
