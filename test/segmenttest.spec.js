@@ -68,7 +68,7 @@ describe('Testing Creation of Segment', function() {
 
   })
 
-  it('segmentlist_testSegmentWithSameName', async function() {
+  it.skip ('segmentlist_testSegmentWithSameName', async function() {
    
     /* this.timeout(100000)
     //prop = await objt.getObjectRepository();
@@ -113,7 +113,7 @@ describe('Testing Creation of Segment', function() {
 
   })
 
-  it.skip('segmentlist_testSegCreationWithOutRules', async function() {
+  it ('segmentlist_testSegCreationWithOutRules', async function() {
    
     this.timeout(100000)
    /* // prop = await objt.getObjectRepository();
