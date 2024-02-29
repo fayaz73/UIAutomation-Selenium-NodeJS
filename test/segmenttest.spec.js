@@ -99,14 +99,14 @@ describe('Testing Creation of Segment', function() {
     this.timeout(100000)
     /* //prop = await objt.getObjectRepository();
     //await this.driver.manage().setTimeouts({ implicit: 1000000 });
-    //await loginpage.log_in(testdata.username.input.validusername, testdata.password.input.validpassword,await this.driver);
+    //await loginpage.log_in(testdata.username.input.validusername, testdata.password.input.validpassword,await driver);
     await segmentlistpage.clickONAddSementBtn(testdata.username.input.validusername, testdata.password.input.validpassword,await this.driver);
     await segmentCreationPage.testDeleteAllRulesInSeg(testdata.username.input.validusername, testdata.password.input.validpassword,await this.driver);
     await segmentCreationPage.clickSegBreadCrum(testdata.username.input.validusername, testdata.password.input.validpassword,await this.driver); */
 
     //prop = await objt.getObjectRepository();
     //await this.driver.manage().setTimeouts({ implicit: 1000000 });
-    await loginpage.log_in(testdata.username.input.validusername, testdata.password.input.validpassword,await this.driver);
+    await loginpage.log_in(testdata.username.input.validusername, testdata.password.input.validpassword,await driver);
     await segmentlistpage.clickONAddSementBtn(await driver);
     await segmentCreationPage.testDeleteAllRulesInSeg(await driver);
     await segmentCreationPage.clickSegBreadCrum(await driver);
@@ -118,12 +118,12 @@ describe('Testing Creation of Segment', function() {
     this.timeout(100000)
    /* // prop = await objt.getObjectRepository();
     //await this.driver.manage().setTimeouts({ implicit: 1000000 });
-    await loginpage.log_in(testdata.username.input.validusername, testdata.password.input.validpassword,await this.driver);
+    await loginpage.log_in(testdata.username.input.validusername, testdata.password.input.validpassword,await driver);
     await segmentlistpage.clickONAddSementBtn(testdata.username.input.validusername, testdata.password.input.validpassword,await this.driver);
     await segmentCreationPage.testSegCreationWithOutRule(testdata.username.input.validusername, testdata.password.input.validpassword,await this.driver);
     await segmentCreationPage.clickSegBreadCrum(testdata.username.input.validusername, testdata.password.input.validpassword,await this.driver); */
 
-    await loginpage.log_in(testdata.username.input.validusername, testdata.password.input.validpassword,await this.driver);
+    await loginpage.log_in(testdata.username.input.validusername, testdata.password.input.validpassword,await driver);
     await segmentlistpage.clickONAddSementBtn(await driver);
     await segmentCreationPage.testSegCreationWithOutRule(await driver);
     await segmentCreationPage.clickSegBreadCrum(await driver);
