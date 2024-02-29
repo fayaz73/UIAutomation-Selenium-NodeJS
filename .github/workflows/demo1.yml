@@ -51,7 +51,7 @@ jobs:
         run: |
          npx mocha --version
          #npm run test
-         npx mocha test
+         npx mocha ./test/segmenttest.spec.js
         env:
          NODE_ENV: test
         continue-on-error: true
