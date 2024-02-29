@@ -3,6 +3,7 @@ const { Builder, By, WebElementCondition,Capabilities, until, Actions } = requir
 const chrome = require('selenium-webdriver/chrome');
 const chromeOptions = new chrome.Options();
 chromeOptions.addArguments('--no-sandbox');
+chromeOptions.addArguments('--disable-dev-shm-usage');
 chromeOptions.setChromeBinaryPath('./drivers/chromedriver');
 
 var  driver =  new webdriver.Builder().forBrowser('chrome').setChromeOptions(chromeOptions).build();
