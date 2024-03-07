@@ -83,7 +83,11 @@ jobs:
           
       - name: Deploy report to Github Pages
         if: always()
-        uses: peaceiris/actions-gh-pages@v2  
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: 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
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-history 
         
       - name: Debugging Information
         run: |
