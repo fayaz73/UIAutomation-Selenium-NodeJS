@@ -62,6 +62,7 @@ describe('Testing Creation of Segment', function() {
     //prop = await objt.getObjectRepository();
     //await driver.manage().setTimeouts({ implicit: 100000 });
     await loginpage.log_in(testdata.username.input.validusername, testdata.password.input.validpassword,await driver);
+    console.log("login successfully");
     await segmentlistpage.clickONAddSementBtn(await driver);
     await segmentCreationPage.createSegment(await driver);
     await segmentCreationPage.clickSegBreadCrum(await driver);
@@ -107,8 +108,11 @@ describe('Testing Creation of Segment', function() {
     //prop = await objt.getObjectRepository();
     //await this.driver.manage().setTimeouts({ implicit: 1000000 });
     await loginpage.log_in(testdata.username.input.validusername, testdata.password.input.validpassword,await driver);
+    console.log("login successfully");
     await segmentlistpage.clickONAddSementBtn(await driver);
+    console.log("click on add button");
     await segmentCreationPage.testDeleteAllRulesInSeg(await driver);
+    console.log("done with deletting the rules");
     await segmentCreationPage.clickSegBreadCrum(await driver);
 
   })
