@@ -29,10 +29,11 @@ class smsEngageCreation extends EngageCreatePage {
 
        await this.clickOnChannel("SMS");
        await this.clickAddEngagement();
-       await this.expandGeneralTab();
+       await this.expandTab("generalTab");
        await this.setEngagementName("engagementTest002");
        await this.setEngagementLabel("lead nurture");
-       await this.expandConfigureTemplate();
+       await this.expandTab("configureTempTab")
+       //await this.expandConfigureTemplate();
        await this.setSMSMessageTemplate("sms message goes here");
        await this.clickSaveEngageBtn();
 

@@ -29,7 +29,7 @@ class SegmentCreation extends BasePage {
         await this.driver.manage().setTimeouts({ implicit: 100000 });
         await opertn.perform(await prop,"CLICK","selectExistingUserSeg","XPATH","");
         await opertn.perform(await prop,"CLICK","creatSegmentBtn","XPATH","");
-        await opertn.perform(await prop,"SETTEXT", "segmentNameTxtBox", "XPATH", "cdpTestSegment99777")
+        await opertn.perform(await prop,"SETTEXT", "segmentNameTxtBox", "XPATH", "cdpTestSegTest888")
         await opertn.perform(await prop,"SETTEXT", "segmentDescriptionTxtArea", "XPATH", "Test Segment description goes here")
         await opertn.perform(await prop,"CLICK","segmentPriorityDropDown","XPATH","");
         await opertn.perform(await prop,"WAIT", "", "", "5000")
@@ -40,7 +40,7 @@ class SegmentCreation extends BasePage {
         await opertn.perform(await prop,"CLICK", "segmentOperator", "XPATH", "")
         await opertn.perform(await prop,"WAIT", "", "", "5000")
         await opertn.perform(await prop,"SELECTITEM", "selectSgmtMenuOperator", "XPATH", "Lesser Than")
-        await opertn.perform(await prop,"SETTEXT", "segmentRule1InpCondition", "XPATH", "3555555555555555555555555")
+        await opertn.perform(await prop,"SETTEXT", "segmentRule1InpCondition", "XPATH", "35")
         await opertn.perform(await prop,"CLICK", "applyRuleBtn", "XPATH", "")
         await opertn.perform(await prop,"WAIT", "", "", "5000")
         await opertn.perform(await prop,"CLICK", "addRuleBtn", "XPATH", "")
@@ -51,7 +51,7 @@ class SegmentCreation extends BasePage {
         await opertn.perform(await prop,"SELECTITEM", "selectSgmtMenuOperator", "XPATH", "Lesser Than")
         await opertn.perform(await prop,"WAIT", "", "", "5000")
         await opertn.perform(await prop,"CLICK", "segmentRule1InpCondition", "XPATH", "")
-        await opertn.perform(await prop,"SETTEXT", "segmentRule1InpCondition", "XPATH", "455555555555555555555555555")
+        await opertn.perform(await prop,"SETTEXT", "segmentRule1InpCondition", "XPATH", "45")
         await opertn.perform(await prop,"CLICK", "applyRuleBtn", "XPATH", "")
         await opertn.perform(await prop,"CLICK", "saveSegmentBtn", "XPATH", "")
         await opertn.perform(await prop,"WAIT", "", "", "5000")
@@ -75,7 +75,7 @@ class SegmentCreation extends BasePage {
         await this.driver.manage().setTimeouts({ implicit: 1000000 });
         await opertn.perform(await prop,"CLICK","selectExistingUserSeg","XPATH","");
         await opertn.perform(await prop,"CLICK","creatSegmentBtn","XPATH","");
-        await opertn.perform(await prop,"SETTEXT", "segmentNameTxtBox", "XPATH", "cdpTestSegment99777")
+        await opertn.perform(await prop,"SETTEXT", "segmentNameTxtBox", "XPATH", "cdpTestSegmentAutoTest")
         await opertn.perform(await prop,"SETTEXT", "segmentDescriptionTxtArea", "XPATH", "Test Segment description goes here")
         await opertn.perform(await prop,"CLICK","segmentPriorityDropDown","XPATH","");
         await opertn.perform(await prop,"WAIT", "", "", "5000")
@@ -86,7 +86,7 @@ class SegmentCreation extends BasePage {
         await opertn.perform(await prop,"CLICK", "segmentOperator", "XPATH", "")
         await opertn.perform(await prop,"WAIT", "", "", "5000")
         await opertn.perform(await prop,"SELECTITEM", "selectSgmtMenuOperator", "XPATH", "Lesser Than")
-        await opertn.perform(await prop,"SETTEXT", "segmentRule1InpCondition", "XPATH", "40000000000")
+        await opertn.perform(await prop,"SETTEXT", "segmentRule1InpCondition", "XPATH", "400")
         await opertn.perform(await prop,"CLICK", "applyRuleBtn", "XPATH", "")
         await opertn.perform(await prop,"WAIT", "", "", "5000")
         await opertn.perform(await prop,"CLICK", "addRuleBtn", "XPATH", "")
@@ -97,7 +97,7 @@ class SegmentCreation extends BasePage {
         await opertn.perform(await prop,"SELECTITEM", "selectSgmtMenuOperator", "XPATH", "Lesser Than")
         await opertn.perform(await prop,"WAIT", "", "", "5000")
         await opertn.perform(await prop,"CLICK", "segmentRule1InpCondition", "XPATH", "")
-        await opertn.perform(await prop,"SETTEXT", "segmentRule1InpCondition", "XPATH", "500000000000")
+        await opertn.perform(await prop,"SETTEXT", "segmentRule1InpCondition", "XPATH", "50")
         await opertn.perform(await prop,"CLICK", "applyRuleBtn", "XPATH", "")
         await opertn.perform(await prop,"CLICK", "saveSegmentBtn", "XPATH", "")
         await opertn.perform(await prop,"WAIT", "", "", "5000")
@@ -127,7 +127,7 @@ class SegmentCreation extends BasePage {
         await opertn.perform(await prop,"CLICK", "segmentOperator", "XPATH", "")
         await opertn.perform(await prop,"WAIT", "", "", "5000")
         await opertn.perform(await prop,"SELECTITEM", "selectSgmtMenuOperator", "XPATH", "Lesser Than")
-        await opertn.perform(await prop,"SETTEXT", "segmentRule1InpCondition", "XPATH", "4000000000")
+        await opertn.perform(await prop,"SETTEXT", "segmentRule1InpCondition", "XPATH", "40")
         await opertn.perform(await prop,"CLICK", "applyRuleBtn", "XPATH", "")
         await opertn.perform(await prop,"WAIT", "", "", "5000")
         await opertn.perform(await prop,"CLICK","deleteRuleBnt","XPATH","")

@@ -1,9 +1,15 @@
+require('./fast-selenium.js'); // imports the fast-selenium script
 const {Builder, By, Key, until} = require('selenium-webdriver');
 var BasePage = require('../pageobjects/basepage');
 var webdriver = require('selenium-webdriver');
-//const assert = require("assert")
 const fs = require('fs');
 const { allure } = require("allure-mocha/runtime");
+var addContext = require("mochawesome/addContext")
+// Now you can use fsp.writeFile, fsp.readFile, etc.
+
+
+//const assert = require("assert")
+
 
 //const chai = require('chai');
 //const chaiAsPromised = require('chai-as-promised');
@@ -16,8 +22,8 @@ const { allure } = require("allure-mocha/runtime");
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
-
 const { assert, expect } = chai;
+//const allure = require('@wdio/allure-reporter');
 
 
 
@@ -44,25 +50,50 @@ class LoginPage extends BasePage{
     }
 
     async log_out(driver){
-        await driver.findElement(By.css(".css-11fo197")).click();
-        await driver.findElement(By.css(".css-16qbq77")).click();
-        await driver.findElement(By.xpath("//div[contains(text(),'Logged out successfully')]/..")).click();
+        //await this.driver.manage().setTimeouts({ implicit: 10000 });
+        await driver.findElement(By.xpath("(//div/img[@src='/app/assets/Lemnisk Logo.svg']/../..//button)[2]")).click();
+        await driver.findElement(By.xpath("//div/ul/li[text()='Logout']")).click();
+        //await driver.findElement(By.xpath("//div[contains(text(),'Logged out successfully')]/..")).click();
     }
 
-    async validate(actualValue, expValue){
-        //assert.equal(actualValue,expValue,`test case failed : Actual: ${actualValue}  Expected: ${expValue}`)
+    async TakeScreenShot() {
+        await this.takeScreenshot();
+    }
 
+    async addContextAsync(context) {
+        // Your class-specific logic here, if any
+    
+        // Call mochawesome/addContext asynchronously with the current test context
+         addContext(this, context);
+      }
+
+    async validate(actualValue, expValue,driver){
         // Use Chai-as-promised to perform a soft assertion
          try {
+            //const screenshot = await this.takeScreenshot();
+            //allure.description("dsfsdfdsfsdfssfsdf")
+            
+            //allure.step();
+            //allure.attachment("Screenshot", Buffer.from(screenshot, 'base64'), "image/png");
+           // allure.attachment("Screenshot", Buffer.from(screenshot, 'base64'), "image/png");
+           /* const screenshotBuffer = Buffer.from(screenshot, 'base64');
+           allure.attachment("Screenshot",screenshotBuffer, "image/png"); */
+            allure.attachment("image.png", fs.readFileSync("out.png"), "image/png");
+            addContext(this,"out.png");
+
+            //allure.createAttachment('Screenshot', () => new Buffer.from(screenshot, 'base64'), 'image/png')();
             //await expect(Promise.resolve(actualValue.toLowerCase())).to.eventually.equal(expValue.toLowerCase());
             const result = await expect(Promise.resolve(actualValue.toLowerCase())).to.eventually.equal(expValue.toLowerCase());
             assert.equal(result, expValue.toLowerCase(), `Verification failed: Actual: ${result}, Expected: ${expValue}`);
+            console.log("end of the try block inside the login validate")
+            
         } catch (error) {
-            //console.error(`Verification failed: Actual: ${actualValue}, Expected: ${expValue}`);
-            // Handle the error using Chai's assert
-            //assert.fail(`Error: ${error.message}`);
-            // Report fail status to Allure
-            allure.step(`Verification failed: Actual: ${actualValue}, Expected: ${expValue}`, () => {});
+            //const screenshot = await this.takeScreenshot();
+            //allure.createAttachment('Error Screenshot', () => new Buffer.from(driver.takeScreenshot(), 'base64'), 'image/png')();
+            //allure.attachment("image.png", fs.readFileSync("out.png"), "image/png");
+            console.log("end of the catch block inside the login validate")
+            console.error("Test failed:", error);
+            assert.fail(`Error: ${error.message}`);
             throw error; // Rethrow the error to mark the test as failed in Mocha
         }
     }
