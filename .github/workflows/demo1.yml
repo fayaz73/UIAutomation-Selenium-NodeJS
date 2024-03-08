@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          token: ${{ secrets.SECRET_NAME }}
+          PERSONAL_TOKEN: ${{ secrets.SECRET_NAME }}
           
       - name: Setup Node.js
         uses: actions/setup-node@v3
