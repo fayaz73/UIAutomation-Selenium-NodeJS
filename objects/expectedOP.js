@@ -7,7 +7,7 @@ const ExpectedSegmentCreated = {
     succMsg: 'cdpTestSegment99777',
     errMsg: {
       sameNameErrMsg: 'Segment with the same name already exi.',
-      atleastOneRuleError: 'There must be at least 1 rule',
+      atleastOneRuleError: 'There must be at least 1 rul',
       addAtleastOneRule: 'Please add at least one rule'
     }
   }
