@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Fri Mar 08 16:42:26 GMT 2024","Fri Mar 08 16:44:06 GMT 2024","100044","Testing Creation of Segment","","","","","segmentlist_testDeletingAllSegmentRules",""
+"skipped","Fri Mar 08 16:42:26 GMT 2024","Fri Mar 08 16:42:26 GMT 2024","2","Testing Creation of Segment","","","","","segmentlist_addSegmentBtn_test",""
+"broken","Fri Mar 08 16:44:06 GMT 2024","Fri Mar 08 16:45:47 GMT 2024","100063","Testing Creation of Segment","","","","","segmentlist_testSegCreationWithOutRules",""
+"skipped","Fri Mar 08 16:42:26 GMT 2024","Fri Mar 08 16:42:26 GMT 2024","0","Testing Creation of Segment","","","","","segmentlist_testSegmentWithSameName",""
